@@ -1,6 +1,6 @@
 import React from "react";
 import "./Summary.css";
-const Summary = ({cartInfo}) => {
+const Summary = ({cartInfo,clearCart}) => {
   let totalPrice = 0;
   let totalShiping = 0;
   for(const cost of cartInfo){
@@ -9,8 +9,7 @@ const Summary = ({cartInfo}) => {
   }
   let tax = (totalPrice+totalShiping)*0.10;
   let grandTotal = totalPrice+totalShiping+tax;
-  console.log(tax);
-  console.log(totalPrice);
+
   return (
     <div className="summary">
       <h2>Order Summary</h2>
@@ -20,7 +19,7 @@ const Summary = ({cartInfo}) => {
       <p>Tax: ${tax.toFixed(2)}</p>
       <h2>Grand Total: ${grandTotal.toFixed(2)}</h2>
       <div className="btn-group">
-        <button>Clear Cart</button>
+        <button onClick={clearCart}>Clear Cart</button>
         <button>Review Order</button>
       </div>
     </div>
