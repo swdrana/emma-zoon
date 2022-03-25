@@ -32,3 +32,7 @@
 .single-product button:hover{
     background-color: #f7c67d;
 }
+.single-product button:active{
+    background-color: #d18100;
+    color: white;
+}

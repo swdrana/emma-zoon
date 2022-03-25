@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Products from "../Products/Products";
 import SingleProduct from "../SingleProduct/SingleProduct";
+import Summary from "../Summary/Summary";
 import "./Body.css";
 
 const Body = () => {
@@ -11,8 +12,9 @@ const Body = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-    <div>
+    <div className="body">
       <Products products={products}></Products>
+      <Summary></Summary>
     </div>
   );
 };
