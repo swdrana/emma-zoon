@@ -1,16 +1,10 @@
-import React from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
 import './Products.css';
 
-const Products = () => {
+const Products = (props) => {
+    console.log(props);
     return (
         <div className='products'>
-            <SingleProduct></SingleProduct>
-            <SingleProduct></SingleProduct>
-            <SingleProduct></SingleProduct>
-            <SingleProduct></SingleProduct>
-            <SingleProduct></SingleProduct>
-            <SingleProduct></SingleProduct>
             <SingleProduct></SingleProduct>
         </div>
     );
