@@ -12,9 +12,7 @@ const Body = () => {
   }, []);
   return (
     <div>
-      {products.map((product) => {
-        return <Products key={product.id} product={product}></Products>;
-      })}
+      <Products products={products}></Products>
     </div>
   );
 };

@@ -2,10 +2,11 @@ import SingleProduct from '../SingleProduct/SingleProduct';
 import './Products.css';
 
 const Products = (props) => {
-    console.log(props);
     return (
         <div className='products'>
-            <SingleProduct></SingleProduct>
+            {props.products.map(product=>{
+               return <SingleProduct key={product.id} product={product}></SingleProduct>
+            })}
         </div>
     );
 };
