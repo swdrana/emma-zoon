@@ -9,7 +9,7 @@ const SingleProduct = (props) => {
       <div className="single-product">
         <img
           src={img}
-          alt=""
+          alt={name}
         />
         <div className="info">
           <h3>{name}</h3>
