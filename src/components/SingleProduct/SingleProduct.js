@@ -17,7 +17,7 @@ const SingleProduct = (props) => {
           <small>Rating : {ratings} start</small>
         </div>
         <button onClick={()=>{
-          props.cartFunction(id, price, shipping)
+          props.cartFunction(props.product)
         }}>Add to Cart</button>
       </div>
     </div>

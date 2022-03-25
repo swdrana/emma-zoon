@@ -11,15 +11,15 @@ const Body = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-
-
-  const addToCurt = (id, price, shipping)=>{
-    console.log(id,price,shipping);
-  }
+  // cart state 
+  const [cart, setCart]=useState([]);
+  const addToCurt = (product) => {
+    setCart([...cart,product]);
+  };
   return (
     <div className="body">
       <Products products={products} cartFunction={addToCurt}></Products>
-      <Summary></Summary>
+      <Summary cartInfo={cart}></Summary>
     </div>
   );
 };
