@@ -11,9 +11,14 @@ const Body = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
+
+  const addToCurt = (id, price, shipping)=>{
+    console.log(id,price,shipping);
+  }
   return (
     <div className="body">
-      <Products products={products}></Products>
+      <Products products={products} cartFunction={addToCurt}></Products>
       <Summary></Summary>
     </div>
   );
